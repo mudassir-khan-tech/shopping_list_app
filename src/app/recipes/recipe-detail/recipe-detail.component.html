@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-12">
+    <img [src]="selectedReipe.imagePath"
+     alt=""
+     class="img-fluid img-thumbnail"
+     style="max-width: 250px"
+     >
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <h2>{{selectedReipe.name}}</h2>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+
+     <div class="btn-group" dropdown>
+      <button id="button-basic"
+      dropdownToggle type="button"
+      class="btn btn-primary dropdown-toggle"
+      aria-controls="dropdown-basic"
+      >
+        Manage Recipe <span class="caret"></span>
+      </button>
+      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-basic" (click)="addToShoppingList()">
+        <li role="menuitem"><a style="cursor: pointer" class="dropdown-item">To shopping List</a></li>
+        <li role="menuitem"><a style="cursor: pointer" class="dropdown-item">Edit Recipe</a></li>
+        <li role="menuitem"><a style="cursor: pointer" class="dropdown-item">Delete Recipe</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    {{selectedReipe.description}}
+  </div>
+</div>
+<div class="row">
+  <div class="col-12">
+    <div class="list-group">
+      <div class="list-group-item" *ngFor="let ingre of selectedReipe.ingredients">
+        {{ingre.name}}
+      </div>
+    </div>
+  </div>
+</div>

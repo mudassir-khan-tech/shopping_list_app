@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand navbar-light bg-light">
+  <a class="navbar-brand" href="#">Recipe Book</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item" routerLinkActive="active"> <a class="nav-link" routerLink="/recipes"> Recipe </a> </li>
+      <li class="nav-item" routerLinkActive="active"> <a class="nav-link"  routerLink="/shopping-list"> Shopping List </a> </li>
+    </ul>
+    <ul class="navbar-nav ml-auto btn-group mr-5" dropdown>
+        <a style="cursor: pointer" id="button-basic" dropdownToggle class="dropdown-toggle text-decoration-none ml-auto text-black-50"
+        aria-controls="dropdown-basic">
+          Manage <span class="caret"></span>
+      </a>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" style="cursor:pointer">Save Data</a></li>
+          <li role="menuitem"><a class="dropdown-item" style="cursor:pointer">Fetch Data</a></li>
+        </ul>
+
+    </ul>
+  </div>
+</nav>
